@@ -8,9 +8,3 @@ services:
     envVars:
       - key: PYTHONUNBUFFERED
         value: "1"
-
-staticSites:
-  - name: finsolve-frontend
-    buildCommand: cd frontend && npm install && npm run build
-    publishPath: frontend/build
-    plan: free
