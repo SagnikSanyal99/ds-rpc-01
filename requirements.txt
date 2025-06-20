@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+transformers
+torch
+langchain
+langchain-community
+chromadb
+unstructured
+pydantic
+httpx
+python-multipart
+pandas
+openpyxl
