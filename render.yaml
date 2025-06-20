@@ -2,15 +2,15 @@ services:
   - type: web
     name: finsolve-backend
     env: python
-    buildCommand: ""
+    buildCommand: pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port 10000
+    plan: free
     envVars:
       - key: PYTHONUNBUFFERED
         value: "1"
-    plan: free
 
 staticSites:
   - name: finsolve-frontend
     buildCommand: cd frontend && npm install && npm run build
     publishPath: frontend/build
-    envVars: []
+    plan: free
